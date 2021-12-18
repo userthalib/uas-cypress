@@ -3,7 +3,7 @@
 //Kelas         : TI-3A
 //Test Case     : Menjalankan Menu Pada Sidebar
 
-it.only('Saucedemo test', function () {
+it.only('lms jti polinema test', function () {
     cy.visit('http://lms.jti.polinema.ac.id/login/index.php')
 
     cy.get('span.login')
@@ -25,5 +25,8 @@ it.only('Saucedemo test', function () {
     .click()
 
     cy.title().should('include','Elearning Teknologi Informasi')
+
+    cy.screenshot()
+
 
 })

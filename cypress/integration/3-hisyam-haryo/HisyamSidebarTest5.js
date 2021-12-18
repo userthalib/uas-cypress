@@ -21,10 +21,10 @@ it.only('lms jti polinema test', function () {
     cy.get('button.btn.pull-xs-left.m-r-1.btn-secondary')
     .click()
 
-    cy.get('[data-key=calendar]')
+    cy.get('[data-key=mycourses]')
     .click()
 
-    cy.title().should('include','LMSTI: Calendar: Detailed month view: December 2021')
+    cy.title().should('include','My Courses')
     cy.screenshot()
 
 
