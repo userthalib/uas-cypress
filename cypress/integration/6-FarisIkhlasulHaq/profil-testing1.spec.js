@@ -34,7 +34,7 @@ describe('Mengisi Data Profil Dengan Sesuai (Benar)', () => {
             var text = "";
             var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
-            for (var i = 0; i < 10; i++)
+            for (var i = 0; i < 8; i++)
                 text += possible.charAt(Math.floor(Math.random() * possible.length));
 
             return text;
@@ -50,13 +50,13 @@ describe('Mengisi Data Profil Dengan Sesuai (Benar)', () => {
             .clear().should('be.empty')
             // Menambahkan isi dari kolom yang telah dihapus sebelumnya (lastname)
         cy.get('#id_lastname')
-            .type(userID_Alpha_Numeric_Lastname).should('not.have.value', /^[^1-9]*$/)
+            .type(userID_Alpha_Numeric_Lastname()).should('not.have.value', /^[^1-9]*$/)
             // Random Name
         function userID_Alpha_Numeric_Lastname() {
             var text = "";
             var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
-            for (var i = 0; i < 10; i++)
+            for (var i = 0; i < 8; i++)
                 text += possible.charAt(Math.floor(Math.random() * possible.length));
 
             return text;

@@ -50,7 +50,7 @@ describe('Mengisi Data Profil Dengan Salah (Kota : Angka, Simbol Huruf)', () => 
             .clear().should('be.empty')
             // Menambahkan isi dari kolom yang telah dihapus sebelumnya (lastname)
         cy.get('#id_lastname')
-            .type(userID_Alpha_Numeric_Lastname).should('not.have.value', /^[^1-9]*$/)
+            .type(userID_Alpha_Numeric_Lastname()).should('not.have.value', /^[^1-9]*$/)
             // Random Name
         function userID_Alpha_Numeric_Lastname() {
             var text = "";
