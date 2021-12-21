@@ -9,16 +9,16 @@ it.only('lms jti polinema test', function () {
     cy.visit('http://lms.jti.polinema.ac.id/login/index.php')
 
     cy.get('span.login')
-    .click()
+    .click().should('be.visible')
 
     cy.get('#username.form-control')
-    .type('1941720154')
-
+    .type('1941720154').should('be.visible')
+    
     cy.get('#password.form-control')
     .type('1941720154')
 
     cy.get('#loginbtn')
-    .click()
-
+    .click().should('be.visible')
+    // kurang pembuktian berhasil dan gagal
     // cy.screenshot()
 })
