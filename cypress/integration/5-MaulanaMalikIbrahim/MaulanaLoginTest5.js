@@ -12,10 +12,10 @@ it.only('lms jti polinema test', function () {
     .click().should('be.visible')
 
     cy.get('#username.form-control')
-    .type('1941720154').should('be.visible')
+    .type('1941******').should('be.visible') // random username another user
     
     cy.get('#password.form-control')
-    .type('1941720154')
+    .type('******0154') // random password another user
 
     cy.get('#loginbtn')
     .click().should('be.visible')
