@@ -1,5 +1,5 @@
 //Nama          : Irfan Thalib A
-//No Absen/NIM  : 11/1941720039
+//No Absen/NIM  : 11/oldpass
 //Kelas         : TI-3A
 //Test Case     : Mengisi password benar, pass baru dan konfiramsi pass diisi password lama
 /// <reference types="cypress"/>
@@ -12,14 +12,14 @@ describe('Insert new password and confirmation password using old password', () 
         cy.contains('Log in').click()
         //mengakses class username dengan id dan memasukkan nim
         cy.get('#username')
-          .type('1941720039')
+          .type('oldpass')
           //menambah assertion berupa konfirmasi password 
-          .should('have.value', '1941720039')
+          .should('have.value', 'oldpass')
         //mengakses class password dengan id dan memasukkan password(nim juga)
         cy.get('#password')
-          .type('1941720039')
+          .type('oldpass')
           //menambah assertion berupa konfirmasi password 
-          .should('have.value', '1941720039')
+          .should('have.value', 'oldpass')
         //mengakses tombol login melalui id dan klik tombol untuk melakukan login
         cy.get('#loginbtn').click()
         //mengakses dropdown melalui id dan klik dropdown
@@ -32,17 +32,17 @@ describe('Insert new password and confirmation password using old password', () 
         cy.contains('Change password').click()
         //mengakses class current password dengan id dan memasukkan password(nim)
         cy.get('#id_password')
-          .type('1941720039')
+          .type('oldpass')
           //menambah assertion berupa konfirmasi password 
-          .should('have.value', '1941720039')
+          .should('have.value', 'oldpass')
         //mengakses class new password dengan id dan memasukkan password lama
         cy.get('#id_newpassword1')
-          .type('1941720039')
+          .type('oldpass')
           //menambah assertion berupa konfirmasi password 
           .should('have.value', 'newpassword')
         //mengakses class new password kedua dengan id dan memasukkan password lama
         cy.get('#id_newpassword2')
-          .type('1941720039')
+          .type('oldpass')
           //menambah assertion berupa konfirmasi password 
           .should('have.value', 'newpassword')
         //mengakses tombol submit changes melalui id dan klik tombol untuk melakukan save
