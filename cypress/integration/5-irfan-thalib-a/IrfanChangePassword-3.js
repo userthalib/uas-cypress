@@ -13,6 +13,8 @@ describe('Not inserting to new password and confirmation password', () => {
         //mengakses class username dengan id dan memasukkan nim
         cy.get('#username')
           .type('1941720039')
+          //menambah assertion berupa konfirmasi password 
+          .should('have.value', '1941720039')
         //mengakses class password dengan id dan memasukkan password(nim juga)
         cy.get('#password')
           .type('1941720039')
@@ -29,6 +31,8 @@ describe('Not inserting to new password and confirmation password', () => {
         //mengakses class current password dengan id dan memasukkan password(nim)
         cy.get('#id_password')
           .type('1941720039')
+          //menambah assertion berupa konfirmasi password 
+          .should('have.value', '1941720039')
         //mengakses class new password dengan id dan memasukkan password baru
         // cy.get('#id_newpassword1')
         //   .type('newpassword')
